@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import Highcharts from 'highcharts';
+import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -318,6 +318,7 @@ export const TradingChart = () => {
             <HighchartsReact
               ref={chartRef}
               highcharts={Highcharts}
+              constructorType="stockChart"
               options={chartOptions}
             />
           )}
